@@ -20,6 +20,12 @@
 .comment_form_text{
   width: 100%;
   margin-bottom: 4px;
+  background-color: white;
+  border: solid lightgray 5px;
+  height: 150px;
+  padding: 10px;
+  font-weight: 300;
+  resize: none;
 }
 
 .comments_date{
@@ -30,7 +36,7 @@
   text-decoration: none;
   padding: 8px 12px;
   border-radius: 8px;
-  font-weight: 100;
+  font-weight: 500;
   border: none;
   display: inline-block;
   cursor: pointer;
