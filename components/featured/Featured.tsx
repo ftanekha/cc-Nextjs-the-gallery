@@ -1,9 +1,10 @@
-import React from 'react'
+import React, { Suspense }  from 'react'
 import Image from 'next/image'
 import {Artwork} from '../../utils/utils'
 import styles from './Featured.module.css'
 import StoredComments from '../comment/StoredComments'
 import Comment from '../comment/Comment'
+import LoadingComments from '../comment/LoadingComments'
   
 export default function Featured({objectID, primaryImage, title, artistDisplayName, objectDate}: Artwork) {
   return (  
@@ -18,7 +19,10 @@ export default function Featured({objectID, primaryImage, title, artistDisplayNa
       <p className={styles.title}>{artistDisplayName}</p>
       <p className={styles.title}>{objectDate}</p>
       <div className={styles.comments_section}>
-        <StoredComments id={objectID}/>
+        <Suspense fallback={<LoadingComments/>}>
+          {/* fetches comments from an asynchronous source */}
+          <StoredComments id={objectID}/>
+        </Suspense>
         <Comment/>
       </div>
     </div>  
