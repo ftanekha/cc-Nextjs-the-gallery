@@ -7,4 +7,4 @@ export type StoredCommentsProps = {
 
 export default async function  StoredComments ({ id }: StoredCommentsProps) {
 
-};
+}

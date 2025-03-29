@@ -1,3 +1,9 @@
+export type Comment = {
+  id: number
+  body: string
+  timestamp: number
+}
+
 export const commentData: CommentData = {
   364093: [
     { id: 1, 
@@ -90,10 +96,4 @@ export const commentData: CommentData = {
 }
 
 export type CommentData = Record<number, Comment[]>
-
-export type Comment = {
-  id: number
-  body: string
-  timestamp: number
-}
   

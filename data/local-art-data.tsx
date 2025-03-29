@@ -1,3 +1,11 @@
+export type Artwork = {
+  objectID: number
+  primaryImage: string
+  title: string
+  artistDisplayName: string
+  objectDate: string
+}
+
 export const artData: Artwork[] = [
   {
     objectID: 364093,
@@ -49,12 +57,4 @@ export const artData: Artwork[] = [
     objectDate: 'probably 1895-96',
   },
 ]
-
-export type Artwork = {
-  objectID: number
-  primaryImage: string
-  title: string
-  artistDisplayName: string
-  objectDate: string
-}
   
