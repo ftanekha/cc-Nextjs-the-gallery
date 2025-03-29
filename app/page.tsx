@@ -1,6 +1,6 @@
 import React, {Suspense} from 'react'  
 import ArtGallery from '../components/gallery/ArtGallery'
-import LoadingGallery from '@/components/featured/LoadingGallery'
+import LoadingGallery from '../components/featured/LoadingGallery'
 
 import styles from './page.module.css'
 
