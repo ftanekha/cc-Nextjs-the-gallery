@@ -11,5 +11,6 @@
   cursor: pointer;
   margin-right: 0.5rem;
   background: #FFFAE5;
+  transition: .5s;
 }
   

@@ -14,3 +14,6 @@ This gallery showcases a stunning array of artworks and invites interaction by
 Throughout this project, I’ll 
 1. practice my understanding of _Server Components_ and _Client Components_
 2. utilize _Suspense Boundaries_ to create a seamless web application
+
+APIs used:
+1. The Metropolitan Museum of Art Collection API

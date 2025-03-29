@@ -46,7 +46,7 @@ export const artData: Artwork[] = [
       'https://images.metmuseum.org/CRDImages/ph/original/DP117520.jpg',
     title: '[Self-Portrait with Christine and Yvonne Lerolle]',
     artistDisplayName: 'Edgar Degas',
-    objectDate: 'probably 1895–96',
+    objectDate: 'probably 1895-96',
   },
 ]
 
