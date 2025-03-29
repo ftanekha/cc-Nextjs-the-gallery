@@ -19,10 +19,12 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body>
-        <div className="urlBar">
-          <UrlBar baseURL="http://localhost:4001" />
-        </div>
+        <div className='w-4/5 bg-black text-gray-300 flex flex-column justify-center items-center' style={{margin: '0 auto'}}>
+          <div className="urlBar">
+            <UrlBar baseURL="http://localhost:4001" />
+          </div>
         <Nav />
+        </div>
         {children}
       </body>
     </html>

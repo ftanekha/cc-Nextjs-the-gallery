@@ -16,7 +16,7 @@ export default function Nav() {
           <Button label="Featured" href="/" />
         </li>
         <li className={lastSegment == 'browse' ? styles.selected : ''}>
-          <Button label="Browse" href="/browse" />
+          <Button label="Browse" href="/browse"/>
         </li>
       </ul>
     </nav>
