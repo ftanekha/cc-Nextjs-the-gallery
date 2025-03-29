@@ -1,9 +1,8 @@
 'use client'
 import React, {useState} from 'react'
 
-import { UserComment } from '../../utils/utils'
+import { UserComment, formatTime } from '../../utils/utils'
 import styles from './Comment.module.css'
-// import { timeStamp } from 'console'
 import NewCommentForm from './NewCommentForm'
 
 
@@ -11,15 +10,13 @@ export default function Comment() {
   const [newComments,setNewComments] = useState<UserComment[]>([])
 
   const addComment = (newCommentBody: string) => {
-    const currentTimeStamp = (new Date()).getTime()
-
     setNewComments(
       [
         ...newComments, 
-        {//random id generation could use improvement
-          id: currentTimeStamp, 
+        {
+          id: newComments.length, 
           body: newCommentBody,
-          timestamp: currentTimeStamp
+          timestamp: (new Date()).getTime()
         }
       ]
     )
@@ -36,7 +33,7 @@ export default function Comment() {
                 <p>{comment.body}</p>
                 <p className={styles.comments_date}>
                   {
-                    new Date(comment.timestamp).toLocaleDateString('en-US', { timeZone: 'UTC' })
+                    formatTime(comment.timestamp)
                   }
                 </p>
               </div>

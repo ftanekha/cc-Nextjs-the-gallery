@@ -15,4 +15,13 @@ export const fetchCommentData = async (id: number): Promise<UserComment[]> => {
   return commentData[id] || [] 
 }
 
+export function formatTime(timestamp: number){
+  //format time info
+  const time = new Date(timestamp);
+  const date = time.toDateString()
+  const hours = time.toLocaleTimeString()
+
+  return `${date}  => ${hours}`
+}
+
 export type { Artwork, UserComment, CommentData }

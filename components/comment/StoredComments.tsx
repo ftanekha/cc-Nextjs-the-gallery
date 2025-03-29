@@ -1,6 +1,6 @@
 import React from 'react'
 import styles from './Comment.module.css'
-import {fetchCommentData} from '../../utils/utils'
+import {fetchCommentData, formatTime} from '../../utils/utils'
 
 export type StoredCommentsProps = {
   id: number
@@ -8,6 +8,7 @@ export type StoredCommentsProps = {
 
 export default async function  StoredComments ({ id }: StoredCommentsProps) {
   const commentData = await fetchCommentData(id)
+
   return (
     <div>
       {
@@ -18,7 +19,7 @@ export default async function  StoredComments ({ id }: StoredCommentsProps) {
                 <p>{body}</p>
                 <p className={styles.comments_date}>
                   {
-                    new Date(timestamp).toLocaleDateString('en-US', { timeZone: 'UTC' })
+                    formatTime(timestamp)
                   }
                 </p>
               </div>
