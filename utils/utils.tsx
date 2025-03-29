@@ -1,5 +1,5 @@
 import { Artwork, artData } from '../data/local-art-data'
-import { Comment, CommentData, commentData } from '../data/local-comment-data'
+import { UserComment, CommentData, commentData } from '../data/local-comment-data'
 
 //In a production app, data would be fetched from a server-side database or an API endpoint.
 
@@ -9,10 +9,10 @@ export const fetchArtData = async (): Promise<Artwork[]> => {
   return artData
 }
  
-export const fetchCommentData = async (id: number): Promise<Comment[]> => {  
+export const fetchCommentData = async (id: number): Promise<UserComment[]> => {  
   // There is an artificial timer here to simulate latency.  
   await new Promise((resolve) => setTimeout(resolve, 100))
   return commentData[id] || [] 
 }
 
-export type { Artwork, Comment, CommentData }
+export type { Artwork, UserComment, CommentData }
