@@ -2,6 +2,7 @@ import React from 'react'
 import Image from 'next/image'
 import {Artwork} from '../../utils/utils'
 import styles from './Featured.module.css'
+import StoredComments from '../comment/StoredComments'
   
 export default function Featured({objectID, primaryImage, title, artistDisplayName, objectDate}: Artwork) {
   return (  
@@ -15,6 +16,9 @@ export default function Featured({objectID, primaryImage, title, artistDisplayNa
       /> 
       <p className={styles.title}>{artistDisplayName}</p>
       <p className={styles.title}>{objectDate}</p>
+      <div className={styles.comments_section}>
+        <StoredComments id={objectID}/>
+      </div>
     </div>  
   );  
 }  
