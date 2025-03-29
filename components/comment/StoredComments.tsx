@@ -27,6 +27,7 @@ export default async function  StoredComments ({ id }: StoredCommentsProps) {
           }
         )
       }
+      <p className='bg-black w-full h-6 text-gray-100 text-small' style={{paddingLeft: 10, margin: '1rem 0'}}>New comments:</p>
     </div>
   )
 }
