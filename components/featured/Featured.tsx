@@ -17,6 +17,7 @@ export default function Featured({objectID, primaryImage, title, artistDisplayNa
         height={500}  
       /> 
       <p className={styles.title}>{artistDisplayName}</p>
+      <p className={styles.title}>{title}</p>
       <p className={styles.title}>{objectDate}</p>
       <div className={styles.comments_section}>
         <Suspense fallback={<LoadingComments/>}>
