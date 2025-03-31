@@ -1,4 +1,4 @@
-import React from 'react'
+// import React from 'react'
 import styles from './ArtGallery.module.css'
 import {fetchArtData} from '../../utils/utils'
 import Featured from '../featured/Featured'
@@ -13,7 +13,7 @@ export default async function ArtGallery() {
                         return <
                             Featured 
                             key = {objectID}
-                            objectID={objectID }
+                            objectID={objectID}
                             primaryImage={primaryImage} 
                             title={title}
                             artistDisplayName={artistDisplayName}

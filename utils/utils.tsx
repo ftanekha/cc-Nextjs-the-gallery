@@ -21,7 +21,7 @@ export function formatTime(timestamp: number){
   const date = time.toDateString()
   const hours = time.toLocaleTimeString()
 
-  return `${date}  => ${hours}`
+  return `${date} => ${hours}`
 }
 
 export type { Artwork, UserComment, CommentData }
